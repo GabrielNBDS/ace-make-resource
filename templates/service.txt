@@ -1,0 +1,9 @@
+import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+
+class {{ prefix }}Service {
+  public async execute({ response }: HttpContextContract) {
+    return response.status(200)
+  }
+}
+
+export default {{ prefix }}Service

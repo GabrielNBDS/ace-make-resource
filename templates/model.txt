@@ -1,0 +1,12 @@
+import { DateTime } from 'luxon'
+import Hash from '@ioc:Adonis/Core/Hash'
+import { column, BaseModel } from '@ioc:Adonis/Lucid/Orm'
+
+export default class ${name} extends BaseModel {
+  ${columns}
+  @column.dateTime({ autoCreate: true })
+  public createdAt: DateTime
+
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  public updatedAt: DateTime
+}

@@ -6,46 +6,33 @@ import Update{{ singularName }}Service from 'App/Services/{{ pluralName }}/Updat
 import Destroy{{ singularName }}Service from 'App/Services/{{ pluralName }}/Destroy{{ singularName }}Service'
 
 export default class {{ pluralName }}Controller {
-  private show{{ singularName }}Service: Show{{ singularName }}Service
-  private index{{ pluralName }}Service: Index{{ pluralName }}Service
-  private store{{ singularName }}Service: Store{{ singularName }}Service
-  private update{{ singularName }}Service: Update{{ singularName }}Service
-  private destroy{{ singularName }}Service: Destroy{{ singularName }}Service
-
-  constructor() {
-    this.show{{ singularName }}Service = new Show{{ singularName }}Service()
-    this.index{{ pluralName }}Service = new Index{{ pluralName }}Service()
-    this.store{{ singularName }}Service = new Store{{ singularName }}Service()
-    this.update{{ singularName }}Service = new Update{{ singularName }}Service()
-    this.destroy{{ singularName }}Service = new Destroy{{ singularName }}Service()
-  }
 
   public async show(ctx: HttpContextContract) {
-    const response = await this.show{{ singularName }}Service.execute(ctx)
+    const response = await Show{{ singularName }}Service.execute(ctx)
 
     return response
   }
 
   public async index(ctx: HttpContextContract) {
-    const response = await this.index{{ pluralName }}Service.execute(ctx)
+    const response = await Index{{ pluralName }}Service.execute(ctx)
 
     return response
   }
 
   public async store(ctx: HttpContextContract) {
-    const response = await this.store{{ singularName }}Service.execute(ctx)
+    const response = await Store{{ singularName }}Service.execute(ctx)
 
     return response
   }
 
   public async update(ctx: HttpContextContract) {
-    const response = await this.update{{ singularName }}Service.execute(ctx)
+    const response = await Update{{ singularName }}Service.execute(ctx)
 
     return response
   }
 
   public async destroy(ctx: HttpContextContract) {
-    const response = await this.destroy{{ singularName }}Service.execute(ctx)
+    const response = await Destroy{{ singularName }}Service.execute(ctx)
 
     return response
   }
